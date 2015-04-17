@@ -1,0 +1,46 @@
+<html>
+<body>
+<?php
+    session_start();
+    
+    $_SESSION['Musik'] = $_POST;
+    $tagging = $_SESSION['tagging'];
+    
+    
+    $con = mysqli_connect("localhost", "root", "", "lastfm");
+    
+    
+    if (!$con) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    
+    
+    $sql = "INSERT INTO users (Altersgruppe, Geschlecht, Bildung, Instrument, Aktiv, Passiv, Konzerte, Information, Tagging, BandWenig1, BandWenig2, BandWenig3, BandMittel1, BandMittel2, BandMittel3, BandViel1, BandViel2, BandViel3, trackWenig1, trackWenig2, trackWenig3, trackMittel1, trackMittel2, trackMittel3, trackViel1, trackViel2, trackViel3) ";
+    $sql .= "VALUES (";
+    
+    foreach($_SESSION['Allgemein'] as $allgemein)
+        $sql .= "'$allgemein', ";
+    
+    foreach($_SESSION['Affin'] as $affin)
+        $sql .= "$affin, ";
+    
+    $sql .= "'$tagging', ";
+    
+    foreach($_SESSION['Musik'] as $musik)
+        $sql .= "'$musik', ";
+    
+    $sql = rtrim($sql, ", ");
+    
+    $sql .= ")";
+    
+    if (mysqli_query($con, $sql)) {
+        header("refresh:3;testcmd.php");
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($con);
+    }
+    mysqli_close($con);
+    
+?>
+</body>
+</html>

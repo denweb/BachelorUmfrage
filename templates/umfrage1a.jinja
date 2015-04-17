@@ -1,0 +1,23 @@
+{% extends 'base.jinja' %}
+
+{% block content %}
+
+<form  method="POST" action="{{ url_for('umfrage2', next=request.args.get('next')) }}">
+<fieldset>
+<legend><h1> Allgemeine Inormationen </h1></legend>
+<fieldset>
+    <legend><h3>Abschluss </h3></legend>
+    <p><i>Geben Sie den momentan h�chsten, von Ihnen erreichen Abschluss an</i></p>
+        {{ form.hidden_tag() }}
+        {{ form.Bildung }}
+        {% if form.Bildung.errors %}
+        {% for error in form.Bildung.errors %}
+        <span class=text-error>{{ error }}</span>
+        {% endfor %}
+        {% endif %}
+</fieldset>
+</fieldset>
+    <input type="submit"/> <input type="reset"/>
+</form>
+    
+{% endblock %}

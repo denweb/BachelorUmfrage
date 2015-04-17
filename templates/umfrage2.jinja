@@ -1,0 +1,68 @@
+{% extends 'base.jinja' %}
+
+{% block content %}
+
+<form action="bachelorumfrage2.php" method="post">
+<fieldset>
+<legend><h1>Musik-Affinitaet</h1></legend>
+<fieldset>
+    <legend><h3> Spielen Sie ein Instrument? </h3></legend>
+        <input type="radio" name="instrument" value="0" checked> Nein <br>
+        <input type="radio" name="instrument" value="3"> Anfaenger <br>
+        <input type="radio" name="instrument" value="6"> Fortgeschritten <br>
+        <input type="radio" name="instrument" value="9"> Experte <br>
+        <p><i>
+            Legende<br>
+            Anfaenger: Ich Grundkenntnisse im Umgang mit dem Instrument und dem Spielen einzelner St�cke vertraut.<br>
+            Fortgeschritten: Ich kenne mich schon gut mit dem Instrument aus, kann mit etwas �ben die meisten St�cke spielen und habe auch schon etwas Live-Erfahrung. Ich f�hle mich im Stande einem Anf�nger Unterricht zu geben.<br>
+            Experte: Ich beherrsche mein Instrument seit Jahren sehr gut und habe wahrscheinlich schon seit einiger Zeit regelm��ig eine Band und Live-Auftritte. Ich kann dem Fortgeschrittenem noch etwas beibringen.<br>
+            Wenn Sie mehr als ein Instrument spielen, orientieren Sie sich am Fortgeschrittensten.
+        </i></p>
+</fieldset>
+
+<fieldset>
+    <legend><h3> Wie oft h�rst du aktiv Musik? </h3></legend>
+        <input type="radio" name="aktiv" value="0" checked> Nie <br>
+        <input type="radio" name="aktiv" value="3"> Monatlich <br>
+        <input type="radio" name="aktiv" value="6"> W�chentlich <br>
+        <input type="radio" name="aktiv" value="9"> T�glich <br>
+        <p><i>
+            Aktiv Musik h�ren: Die Musik wird bewusst geh�rt und genossen und l�uft, zum Beispiel nicht nur als Begleitung zu einer anderen T�tigkeit, im Hintergrund.
+        </i></p>
+</fieldset>
+
+<fieldset>
+    <legend><h3> Wie oft h�rst du passiv Musik? </h3></legend>
+        <input type="radio" name="passiv" value="0" checked> Nie <br>
+        <input type="radio" name="passiv" value="1"> Monatlich <br>
+        <input type="radio" name="passiv" value="2"> W�chentlich <br>
+        <input type="radio" name="passiv" value="3"> T�glich <br>
+        <p><i>
+            Passiv Musik h�ren: Die Musik wird zwar wahrgenommen aber l�uft nur Begleitung oder �hnliches im Hintergrund. Eine andere T�tigkeit als das H�ren steht im Vordergrund.
+        </i></p>
+</fieldset>
+
+<fieldset>
+    <legend><h3> Wie oft besuchst du Konzerte/gehst zu Veranstaltungen mit Live-Musik? </h3></legend>
+        <input type="radio" name="konzerte" value="0" checked> Eigentlich nie <br>
+        <input type="radio" name="konzerte" value="2"> Unregelm��ig, wenn etwas besonderes ansteht <br>
+        <input type="radio" name="konzerte" value="4"> Monatlich oder sogar w�chentlich, wenn ich kann <br>
+</fieldset>
+
+<fieldset>
+    <legend><h3> Wie stark informierst du dich �ber Musik, die du magst? </h3></legend>
+        <input type="radio" name="information" value="0" checked> Nie <br>
+        <input type="radio" name="information" value="2"> Nebenbei <br>
+        <input type="radio" name="information" value="4"> Monatlich oder sogar w�chentlich, wenn ich kann <br>
+        <p><i>
+            Als informieren wird hier der aktive Akt der Informationsbeschaffung gesehen.<br>
+            Beispiele: Musik- oder Fan-Magazine lesen, Internetseiten der K�nstler, Blogs oder �hnliches besuchen etc.<br>
+            Einen K�nstler beispielsweise auf Facebook zu liken und so Neuigkeiten informiert zu werden, z�hlt als "Nebenbei".
+        </i></p>
+</fieldset>
+</fieldset>
+<br>
+<input type="submit"/> <input type="reset"/>
+</form>
+
+{% endblock %}

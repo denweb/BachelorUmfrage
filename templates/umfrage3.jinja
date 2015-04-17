@@ -1,0 +1,20 @@
+<html>
+<body>
+<?php
+    session_start();
+    
+    $_SESSION['Affin'] = $_POST;
+    
+?>
+<form action="bachelorumfrage3.php" method="post">
+<fieldset>
+    <legend><h1> Tagging-Erfahrung </h1></legend>
+    <p>Ist Ihnen das Prinzip vom 'Taggen' im Web 2.0 bekannt und haben Sie genug Erfahrung damit, um sich zuzutrauen, selber etwas zu taggen?</p>
+        <input type="radio" name="tagging" value="ja"> Ja <br>
+        <input type="radio" name="tagging" value="nein" checked> Nein <br>
+</fieldset> 
+
+    <input type="submit"/> <input type="reset"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<body>
+<?php
+    session_start();
+    
+    $varTagging = $_POST['tagging'];
+    $errorMessage = "";
+    
+    $_SESSION['tagging'] = $varTagging;
+   
+    
+    if($varTagging == 'ja'){
+        header('Location: bacheloraufgaben.php');
+    } 
+    else {
+        header('Location: taggingpage.php');
+    }
+?>
+</body>
+</html>

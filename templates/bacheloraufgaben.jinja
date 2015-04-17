@@ -1,0 +1,44 @@
+<html>
+<body>
+<?php
+    session_start();
+?>
+<form action="bacheloraufgaben2.php" method="post">
+<fieldset>
+<legend><h1> Eigene Aufgaben </h1></legend>
+    <fieldset>
+    <legend><h3>Zu Bands</h3></legend>
+    <p><i>Geben Sie bitte jeweils drei Bands an, die Sie viel / mittelmäßig / wenig - gar nicht hören.</i></p>
+    <p>Viel 1:<br><input name="bandviel1" type="text" size="30" maxlength="100" placeholder="Künstler"></p>
+    <p>Viel 2:<br><input name="bandviel2" type="text" size="30" maxlength="100" placeholder="Künstler"></p>
+    <p>Viel 3:<br><input name="bandviel3" type="text" size="30" maxlength="100" placeholder="Künstler"></p>
+    <p>Mittel 1:<br><input name="bandmittel1" type="text" size="30" maxlength="100" placeholder="Künstler"></p>
+    <p>Mittel 2:<br><input name="bandmittel2" type="text" size="30" maxlength="100" placeholder="Künstler"></p>
+    <p>Mittel 3:<br><input name="bandmittel3" type="text" size="30" maxlength="100" placeholder="Künstler"></p>
+    <p>Wenig 1:<br><input name="bandwenig1" type="text" size="30" maxlength="100" placeholder="Künstler"></p>
+    <p>Wenig 2:<br><input name="bandwenig2" type="text" size="30" maxlength="100" placeholder="Künstler"></p>
+    <p>Wenig 3:<br><input name="bandwenig3" type="text" size="30" maxlength="100" placeholder="Künstler"></p>
+    </fieldset>
+    
+    <fieldset>
+    <legend><h3>Zu Tracks</h3></legend>
+    <p><i>Geben Sie bitte jeweils drei tracks an, die Sie viel / mittelmäßig / wenig - gar nicht hören.<br>
+    <br>
+    Geben sie den Track bitte in folgender Form an: <b color="red">Künstler - Track</b><br>
+    (Nehmen Sie sich etwas Zeit und achten Sie auf die korrekte Schreibweise der Namen. Dies ist für den weiteren Verlauf der Umfrage wichtig.)</i></p>
+    <p>Viel 1:<br><input name="trackviel1" type="text" size="30" maxlength="100" placeholder="Künstler - Track"></p>
+    <p>Viel 2:<br><input name="trackviel2" type="text" size="30" maxlength="100" placeholder="Künstler - Track"></p>
+    <p>Viel 3:<br><input name="trackviel3" type="text" size="30" maxlength="100" placeholder="Künstler - Track"></p>
+    <p>Mittel 1:<br><input name="trackmittel1" type="text" size="30" maxlength="100" placeholder="Künstler - Track"></p>
+    <p>Mittel 2:<br><input name="trackmittel2" type="text" size="30" maxlength="100" placeholder="Künstler - Track"></p>
+    <p>Mittel 3:<br><input name="trackmittel3" type="text" size="30" maxlength="100" placeholder="Künstler - Track"></p>
+    <p>Wenig 1:<br><input name="trackwenig1" type="text" size="30" maxlength="100" placeholder="Künstler - Track"></p>
+    <p>Wenig 2:<br><input name="trackwenig2" type="text" size="30" maxlength="100" placeholder="Künstler - Track"></p>
+    <p>Wenig 3:<br><input name="trackwenig3" type="text" size="30" maxlength="100" placeholder="Künstler - Track"></p>
+    </fieldset>
+</fieldset> 
+
+    <input type="submit"/> <input type="reset"/>
+</form>
+</body>
+</html>
